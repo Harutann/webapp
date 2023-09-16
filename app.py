@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 app = Flask(__name__)
 @app.route('/')
 def index():
@@ -15,3 +15,11 @@ def test_request():
 @app.route("/users/<user_name>")
 def users(user_name):
     return user_name
+
+@app.route('/show_html')
+def show_html():
+    return render_template('test.html')
+
+@app.route('/exercise')
+def show2_html():
+    return f'exercise:{request.args.get("my_name")}'
