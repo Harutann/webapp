@@ -46,3 +46,7 @@ def try_rest():
 def show_try_html():
     return render_template('try_html.html')
 
+@app.route('/show_data')
+def show2_try_html():
+    return f'show_data:{request.args.get("text")}'
+
