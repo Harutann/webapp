@@ -42,3 +42,7 @@ def try_rest():
     response_json = {"response_json": request_json}
     return jsonify(response_json)
 
+@app.route('/show_try_html')
+def show_try_html():
+    return render_template('try_html.html')
+
