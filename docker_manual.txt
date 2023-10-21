@@ -1,0 +1,23 @@
+docker -v  dockerのバージョンを確認する
+
+docker build --tag webapp-docker . イメージをビルドする
+
+docker images イメージを一覧で表示する
+
+docker tag webapp-docker:latest webapp-docker:v1.0.0 イメージにタグをつける
+
+docker rmi webapp-docker:v1.0.0 イメージを削除する 
+
+docker run webapp-docker コンテナを立ち上げる
+--publish ポートを公開する
+-d バックグラウンド機能
+--name　名前を決める
+
+docker ps コンテナの詳細を表示
+-a　すべての詳細
+
+docker rm 3eba　コンテナを削除
+
+docker stop 4059　コンテナを停止
+
+docker restart 42daa　コンテナをリスタート
