@@ -14,8 +14,14 @@
         var trace = {
             x: [1, 2, 3, 4],
             y: [10, 15, 13, 17],
-            mode: 'markers',
-            type: 'scatter'
+            mode: 'lines+markers+text',
+            type: 'scatter',
+            name: 'Team A',
+            text: ['A-1', 'A-2', 'A-3', 'A-4', 'A-5'],
+            textposition: 'top center',
+            textfont: {
+                family:  'Raleway, sans-serif'
+            },
         };
         var data = [trace];
         Plotly.newPlot('try_graph', data);
